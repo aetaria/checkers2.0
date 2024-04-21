@@ -45,4 +45,9 @@ public class Game {
 //		kL.draw(g, grid);
 //		kD.draw(g, grid);
 	}
+
+	public void parseMove(String move)
+	{
+		
+	}
 }
