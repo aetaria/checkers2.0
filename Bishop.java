@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class Bishop
+public class Bishop extends Queen
 {
     private ImageIcon blackBishop, whiteBishop;
     public Bishop()
