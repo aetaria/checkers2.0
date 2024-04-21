@@ -48,6 +48,9 @@ public class Game {
 
 	public void parseMove(String move)
 	{
+		String piece = move.substring(0, 2);
+		int col = (int)move.charAt(2) 
+		int row = Integer.parseInt(move.substring(3, move.length));
 		
 	}
 }
