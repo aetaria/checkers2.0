@@ -8,6 +8,7 @@ public class Panel extends JPanel
 {
 	//variables for the overall width and height
 	private int w, h;
+	private Game game = new Game();
 	
 	//sets up the initial panel for drawing with proper size
 	public Panel(int w, int h)
