@@ -17,6 +17,8 @@ public class Panel extends JPanel
 
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
+		String move = JOptionPane.showInputDialog("Enter which piece you want to move and where:);
+		game.parseMove(move);
 		Random rng = new Random();
 		boolean black = true;
 		for(int i = 0; i<8; i++){
