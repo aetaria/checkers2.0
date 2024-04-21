@@ -16,19 +16,31 @@ public class Queen
         Image newImage = copy.getScaledInstance(100, 100, 1);
         pieceTeam = new ImageIcon(newImage);
     }
-    public void draw(Graphics g, int[][] arr)
+
+    public void draw(Graphics g, int[][] arr, int piece)
     {
         for(int i = 0; i < arr.length; i++){
             int y = i * 100;
             for(int j = 0; j < arr[i].length; j++){
                 int x = j * 100;
-                if(arr[i][j] == 2)
+                if(arr[i][j] == piece)
                     pieceTeam.paintIcon(null, g, x, y);
+
             }
         }
     }
+
     public void check(int[][] arr)
     {
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                
+            }
+        }
+    }
 
+    public void move(int x, int y)
+    {
+        
     }
 }
