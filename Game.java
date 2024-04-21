@@ -2,7 +2,7 @@ import java.awt.Graphics;
 
 public class Game {
 
-	private Queen qL = new Queen(true);
+	private Queen qL = new Queen(3, 7);
 	private Bishop bL = new Bishop(true);
 	private Rook rL = new Rook(true);
 	private King kL = new King(true);
@@ -30,19 +30,19 @@ public class Game {
 		int row = Integer.parseInt(move.substring(2, move.length()));
 		if(piece == 'Q')
 		{
-			qL.move(col, row);
+			qL.move(col, row, grid);
 		}
 		else if(piece == 'K')
 		{
-			kL.move(col, row);
+			kL.move(col, row, grid);
 		}
 		else if(piece == 'R')
 		{
-			rL.move(col, row);
+			rL.move(col, row, grid);
 		}
 		else
 		{
-			bL.move(col, row);
+			bL.move(col, row, grid);
 		}
 	}
 }

@@ -4,13 +4,13 @@ import java.awt.*;
 public class Queen
 {
     private ImageIcon pieceTeam;
+    private int x, y;
 
-    public Queen(boolean team) //false = black ; true = white
+    public Queen(int x, int y)
     {
-        if(!team)
-            pieceTeam = new ImageIcon("images/DarkQueen.png");
-        else
-            pieceTeam = new ImageIcon("images/LightQueen.png");
+        this.x = x;
+        this.y = y;
+        pieceTeam = new ImageIcon("images/LightQueen.png");
 
         Image copy = pieceTeam.getImage();
         Image newImage = copy.getScaledInstance(100, 100, 1);
@@ -30,17 +30,23 @@ public class Queen
         }
     }
 
-    public void check(int[][] arr)
+    public void move(int newX, int newY, int[][] arr)
     {
+        // i = y
         for(int i = 0; i < arr.length; i++){
+            // j = x
             for(int j = 0; j < arr[i].length; j++){
-                
+                if(i == x || j == y){
+                    if(arr[i][j] == 0){
+                        x = i;
+                        y = j;
+                    }    
+                }
+                int dY = y - j;
+                if()
             }
         }
-    }
+        return false;
 
-    public void move(int x, int y)
-    {
-        
     }
 }
