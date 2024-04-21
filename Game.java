@@ -2,14 +2,14 @@ import java.awt.Graphics;
 
 public class Game {
 
-	Queen qL = new Queen();
-	Queen qD = new Queen();
-	Bishop bL = new Bishop();
-	Bishop bD = new Bishop();
-	Rook rL = new Rook();
-	Rook rD = new Rook();
-	King kL = new King();
-	King kD = new King();
+	Queen qL = new Queen(false);
+	Queen qD = new Queen(true);
+	Bishop bL = new Bishop(false);
+	Bishop bD = new Bishop(true);
+	Rook rL = new Rook(false);
+	Rook rD = new Rook(true);
+	King kL = new King(false);
+	King kD = new King(true);
 	
 	int[][] grid = {{0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}, {0, 1, 2, 3, 4, 5, 6, 7}};
 	

@@ -2,11 +2,13 @@ import javax.swing.*;
 
 public class Rook extends Queen
 {
-    private ImageIcon blackRook, whiteRook;
-    public Rook()
+    private final ImageIcon pieceTeam;
+    public Rook(boolean team)
     {
-        super(
-        blackRook = new ImageIcon("images/DarkRook.png");
-        whiteRook = new ImageIcon("images/LightRook.png");
+        super(team);
+        if(!team)
+            pieceTeam = new ImageIcon("images/DarkBishop.png");
+        else
+            pieceTeam = new ImageIcon("images/LightBishop.png");
     }
 }

@@ -1,11 +1,15 @@
 import javax.swing.*;
 
-public class King extends Queen
+public class King
 {
-    private ImageIcon blackKing, whiteKing;
-    public King()
+    private ImageIcon pieceTeam;
+    private boolean team;
+    public King(boolean team)
     {
-        blackKing = new ImageIcon("images/DarkKing.png");
-        whiteKing = new ImageIcon("images/LightKing.png");
+        this.team = team;
+        if(!team)
+            pieceTeam = new ImageIcon("images/DarkKing.png");
+        else
+            new ImageIcon("images/LightKing.png");
     }
 }
