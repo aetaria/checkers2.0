@@ -14,36 +14,15 @@ public class Panel extends JPanel
 		this.setPreferredSize(new Dimension(w,h));
 		
 	}
-<<<<<<< Updated upstream
 
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
-		String move = JOptionPane.showInputDialog("Enter which piece you want to move and where:);
-		game.parseMove(move);
-=======
-	
-	
-	//all graphical components go here
-	//this.setBackground(Color c) for example will change background color
-	public void paintComponent(Graphics g){
-		//this line sets up the graphics - always needed
-		super.paintComponent(g);
-		//all drawings below here:
->>>>>>> Stashed changes
 		Random rng = new Random();
 		boolean black = true;
 		for(int i = 0; i<8; i++){
 			for(int j = 0; j<8; j++){
 				if(i > 0 && j == 0){
-<<<<<<< Updated upstream
                     black = !black;
-=======
-					if(black){
-						black = false;
-					}else{
-						black = true;
-					}
->>>>>>> Stashed changes
 				}
 				if(black){
 					g.setColor(Color.BLACK);
@@ -56,18 +35,17 @@ public class Panel extends JPanel
 				}
 			}
 		}
-<<<<<<< Updated upstream
 
 		game.draw(g);
 	}
 	private class KeyControl implements KeyListener
 	{
-		public void keyTyped(KeyEvent e) 
+		public void keyTyped(KeyEvent e)
 		{
-			
+
 		}
 
-		public void keyPressed(KeyEvent e) 
+		public void keyPressed(KeyEvent e)
 		{
 			String s = "";
 			switch (e.getKeyCode())
@@ -84,7 +62,7 @@ public class Panel extends JPanel
 	            case KeyEvent.VK_D:
 	            	s = "D";
 	               break;
-	            case KeyEvent.VK_E: 
+	            case KeyEvent.VK_E:
 	            	s = "E";
 	            	break;
 	            case KeyEvent.VK_F:
@@ -119,21 +97,19 @@ public class Panel extends JPanel
 	            	break;
 	            case KeyEvent.VK_8:
 	            	s = "8";
-	            	break; 	
+	            	break;
 	            case KeyEvent.VK_BACK_SPACE:
 	            	s = "remove";
 	            	break;
 	         }
-			
+
 		}
 
-		public void keyReleased(KeyEvent e) 
+		public void keyReleased(KeyEvent e)
 		{
-			
+
 		}
-		
-=======
->>>>>>> Stashed changes
+
 	}
 }
 
