@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class King
+public class King extends Queen
 {
     private ImageIcon blackKing, whiteKing;
     public King()
