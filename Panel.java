@@ -14,17 +14,36 @@ public class Panel extends JPanel
 		this.setPreferredSize(new Dimension(w,h));
 		
 	}
+<<<<<<< Updated upstream
 
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		String move = JOptionPane.showInputDialog("Enter which piece you want to move and where:);
 		game.parseMove(move);
+=======
+	
+	
+	//all graphical components go here
+	//this.setBackground(Color c) for example will change background color
+	public void paintComponent(Graphics g){
+		//this line sets up the graphics - always needed
+		super.paintComponent(g);
+		//all drawings below here:
+>>>>>>> Stashed changes
 		Random rng = new Random();
 		boolean black = true;
 		for(int i = 0; i<8; i++){
 			for(int j = 0; j<8; j++){
 				if(i > 0 && j == 0){
+<<<<<<< Updated upstream
                     black = !black;
+=======
+					if(black){
+						black = false;
+					}else{
+						black = true;
+					}
+>>>>>>> Stashed changes
 				}
 				if(black){
 					g.setColor(Color.BLACK);
@@ -37,6 +56,7 @@ public class Panel extends JPanel
 				}
 			}
 		}
+<<<<<<< Updated upstream
 
 		game.draw(g);
 	}
@@ -112,6 +132,8 @@ public class Panel extends JPanel
 			
 		}
 		
+=======
+>>>>>>> Stashed changes
 	}
 }
 
