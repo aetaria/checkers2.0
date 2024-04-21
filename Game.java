@@ -48,9 +48,24 @@ public class Game {
 
 	public void parseMove(String move)
 	{
-		String piece = move.substring(0, 2);
-		int col = ((int)move.charAt(2)) - 41;
-		int row = Integer.parseInt(move.substring(3, move.length));
-		
+		char piece = move.charAt(0);
+		int col = ((int)move.charAt(1)) - 41;
+		int row = Integer.parseInt(move.substring(2, move.length));
+		if(piece == 'Q')
+		{
+			qL.move(col, row);
+		}
+		else if(piece == 'K')
+		{
+			kL.move(col, row);
+		}
+		else if(piece == 'R')
+		{
+			rL.move(col, row);
+		}
+		else
+		{
+			bL.move(col, row);
+		}
 	}
 }
