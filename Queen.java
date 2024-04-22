@@ -7,8 +7,9 @@ public class Queen
     private int x, y;
     private boolean team;
 
-    public Queen(int x, int y, boolean team)
+    public Queen(int x, int y, boolean team) extends Player
     {
+        super(team);
         this.x = x;
         this.y = y;
         pieceTeam = new ImageIcon("images/LightQueen.png");
