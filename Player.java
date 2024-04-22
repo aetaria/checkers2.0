@@ -51,7 +51,7 @@ public class Player {
 		}
 		else if(piece == 'K')
 		{
-			K.move(col, row, grid);
+			K.kingMove(col, row, grid);
 		}
 		else if(piece == 'R')
 		{
