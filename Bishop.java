@@ -3,6 +3,7 @@ import javax.swing.*;
 public class Bishop extends Queen
 {
     private ImageIcon pieceTeam;
+    private boolean team;
     public Bishop(boolean team)
     {
         super(team);
