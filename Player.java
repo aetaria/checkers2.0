@@ -6,8 +6,8 @@ public class Player {
 	private Queen qD = new Queen(false, 3, 0);
 	private Bishop bL = new Bishop(true, 2, 7);
 	private Bishop bD = new Bishop(false, 2, 0);
-	private Rook rL = new Rook(true, 0, 0);
-	private Rook rD = new Rook(false, 0, 7);
+	private Rook rL = new Rook(true, 0, 7);
+	private Rook rD = new Rook(false, 0, 0);
 	private King kL = new King(true, 4, 7);
 	private King kD = new King(false, 4, 0);
 	
