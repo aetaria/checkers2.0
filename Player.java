@@ -49,11 +49,15 @@ public class Player {
 		}
 		else if(piece == 'R')
 		{
-			rL.moveStraight(col, row, grid);
+			boolean legal = rL.moveStraight(col, row, grid);
+			if(!legal)
+				JOptionPane.showMessageDialog("Illegal move");
 		}
 		else
 		{
-			bL.moveDiagonal(col, row, grid);
+			boolean legal = bL.moveDiagonal(col, row, grid);
+			if(!legal)
+				JOptionPane.showMessageDialog("Illegal move");
 		}
 	}
 }
