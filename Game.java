@@ -25,6 +25,10 @@ public class Player {
 		bL.draw(g, grid, 4);
 		rL.draw(g, grid, 3);
 		kL.draw(g, grid, 1);
+		qD.draw(g, grid, 2);
+		bD.draw(g, grid, 4);
+		rD.draw(g, grid, 3);
+		kD.draw(g, grid, 1);
 	}
 
 	public void parseMove(String move)
