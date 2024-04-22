@@ -1,14 +1,18 @@
 import java.awt.Graphics;
 
-public class Game {
+public class Player {
 
 	private Queen qL = new Queen(3, 7);
 	private Bishop bL = new Bishop(true);
 	private Rook rL = new Rook(true);
 	private King kL = new King(true);
+	private Queen qD = new Queen(3, 7, false);
+	private Bishop bD = new Bishop(false);
+	private Rook rD = new Rook(false);
+	private King kD = new King(false);
 	
 	private int[][] grid = new int[8][8];
-	public Game()
+	public Player()
 	{
 //		0 = nothing ; 1 = king ; 2 = queen ; 3 = rook ; 4 = bishop
 //		light pieces
