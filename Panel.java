@@ -5,7 +5,8 @@ import java.util.Random;
 public class Panel extends JPanel
 {
 	private int w, h;
-	private Game game = new Game();
+	Player player1 = new Player();
+	Player player2 = new Player();
 
 	public Panel(int w, int h)
 	{
