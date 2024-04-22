@@ -12,7 +12,7 @@ public class Frame //Main class
 		int h = 800;
 		
 		//sets up a JFrame object with title "Template"
-		JFrame frame = new JFrame("Template");
+		JFrame frame = new JFrame("Checkers 2");
 		//make sure the jframe closes when you hit the 'x'
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//adds the drawing panel to the frame

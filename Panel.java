@@ -19,7 +19,6 @@ public class Panel extends JPanel
 
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
-		game.draw(g);
 		if(playerTracker == 0)
 		{
 			String move = JOptionPane.showInputDialog("White, enter which piece you want to move and where:");
@@ -29,7 +28,7 @@ public class Panel extends JPanel
 		else if(playerTracker == 1)
 		{
 			String move = JOptionPane.showInputDialog("Black, enter which piece you want to move and where:");
-			player2.parseMove();
+			player2.parseMove(move);
 			playerTracker--;
 		}
 		boolean black = true;

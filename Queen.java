@@ -1,21 +1,20 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Queen extends Player
+public class Queen
 {
     private ImageIcon pieceTeam;
     private int x, y;
-    private boolean team;
 
-    public Queen(boolean team, int x, int y)
+    public Queen(boolean team, int x, int y) //false = black ; true = white
     {
-        super(team);
         this.x = x;
         this.y = y;
         if (!team)
             pieceTeam = new ImageIcon("images/darkQueen.png");
         else
             pieceTeam = new ImageIcon("images/LightQueen.png");
+
         Image copy = pieceTeam.getImage();
         Image newImage = copy.getScaledInstance(100, 100, 1);
         pieceTeam = new ImageIcon(newImage);
@@ -26,23 +25,31 @@ public class Queen extends Player
         pieceTeam.paintIcon(null, g, makePoint(x), makePoint(y));
     }
 
-    public void moveStraight(int newX, int newY, int[][] arr)
-    {
-        // i = y
-        for(int i = 0; i < arr.length; i++){
-            // j = x
-            for(int j = 0; j < arr[i].length; j++){
-                if(i == x || j == y){
-                    if(arr[i][j] == 0){
-                        x = i;
-                        y = j;
-                    }    
+    public boolean moveStraight(int newX, int newY, int[][] arr) {
+        if (newX == x || newY == y) {
+            int stepX = (newX > x) ? 1 : (newX < x) ? -1 : 0;
+            int stepY = (newY > y) ? 1 : (newY < y) ? -1 : 0;
+    
+            int currentX = x;
+            int currentY = y;
+    
+            while (currentX != newX || currentY != newY) {
+                currentX += stepX;
+                currentY += stepY;
+    
+                if (arr[currentY][currentX] != 0) {
+                    return false; 
                 }
             }
+
+            x = newX;
+            y = newY;
+            return true;
         }
+        return false;
     }
 
-    public void moveDiagonal(int newX, int newY, int[][] arr) {
+    public boolean moveDiagonal(int newX, int newY, int[][] arr) {
         int dx = Math.abs(newX - x);
         int dy = Math.abs(newY - y);
     
@@ -61,14 +68,16 @@ public class Queen extends Player
     
                 if (arr[currentY][currentX] != 0) {
                     // Path is blocked, cannot move diagonally
-                    return;
+                    return false;
                 }
             }
     
             // If the loop completes without finding any obstacle, move the queen
             x = newX;
             y = newY;
+            return true;
         }
+        return false;
     }
 
     private int makePoint(int coord)

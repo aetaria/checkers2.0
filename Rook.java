@@ -11,4 +11,10 @@ public class Rook extends Queen
         else
             pieceTeam = new ImageIcon("images/LightBishop.png");
     }
+
+    public void moveDiagonal()
+    {
+        
+    }
+    
 }

@@ -12,4 +12,17 @@ public class King extends Queen
         else
             new ImageIcon("images/LightKing.png");
     }
+
+    public void moveDiagonal()
+    {
+    }
+
+    public void moveStraight()
+    {
+    }
+
+    public void kingMove()
+    {
+        
+    }
 }
