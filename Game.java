@@ -10,10 +10,13 @@ public class Player {
 	private Bishop bD = new Bishop(false);
 	private Rook rD = new Rook(false);
 	private King kD = new King(false);
+
+	private boolean team;
 	
 	private int[][] grid = new int[8][8];
-	public Player()
+	public Player(boolean team)
 	{
+		this.team = team;
 //		0 = nothing ; 1 = king ; 2 = queen ; 3 = rook ; 4 = bishop
 //		light pieces
 		grid[7][0] = 3; grid[7][2] = 4; grid[7][3] = 2; grid[7][4] = 1; grid[7][5] = 4; grid[7][7] = 3;
