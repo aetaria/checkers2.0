@@ -20,6 +20,8 @@ public class Player {
 //		0 = nothing ; 1 = king ; 2 = queen ; 3 = rook ; 4 = bishop
 //		light pieces
 		grid[7][0] = 3; grid[7][2] = 4; grid[7][3] = 2; grid[7][4] = 1; grid[7][5] = 4; grid[7][7] = 3;
+//		dark pieces
+		grid[0][0] = 3; grid[0][2] = 4; grid[0][3] = 2; grid[0][4] = 1; grid[0][5] = 4; grid[0][7] = 3;		
 	}
 	
 	public void draw(Graphics g)
