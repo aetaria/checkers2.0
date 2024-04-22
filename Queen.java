@@ -5,13 +5,14 @@ public class Queen
 {
     private ImageIcon pieceTeam;
     private int x, y;
+    private boolean team;
 
-    public Queen(int x, int y)
+    public Queen(int x, int y, boolean team)
     {
         this.x = x;
         this.y = y;
         pieceTeam = new ImageIcon("images/LightQueen.png");
-
+        this.team = team;
         Image copy = pieceTeam.getImage();
         Image newImage = copy.getScaledInstance(100, 100, 1);
         pieceTeam = new ImageIcon(newImage);
