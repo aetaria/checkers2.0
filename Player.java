@@ -2,26 +2,24 @@ import java.awt.Graphics;
 
 public class Player {
 
-	private Queen qL = new Queen(3, 7);
-	private Bishop bL = new Bishop(true);
-	private Rook rL = new Rook(true);
-	private King kL = new King(true);
-	private Queen qD = new Queen(3, 7, false);
-	private Bishop bD = new Bishop(false);
-	private Rook rD = new Rook(false);
-	private King kD = new King(false);
-
-	private boolean team;
+	private Queen qL = new Queen(true, 3, 7);
+	private Queen qD = new Queen(false, 3, 0);
+	private Bishop bL = new Bishop(true, 2, 7);
+	private Bishop bD = new Bishop(false, 2, 0);
+	private Rook rL = new Rook(true, 0, 0);
+	private Rook rD = new Rook(false, 0, 7);
+	private King kL = new King(true, 4, 7);
+	private King kD = new King(false, 4, 0);
 	
 	private int[][] grid = new int[8][8];
 	public Player(boolean team)
 	{
-		this.team = team;
 //		0 = nothing ; 1 = king ; 2 = queen ; 3 = rook ; 4 = bishop
 //		light pieces
-		grid[7][0] = 3; grid[7][2] = 4; grid[7][3] = 2; grid[7][4] = 1; grid[7][5] = 4; grid[7][7] = 3;
-//		dark pieces
-		grid[0][0] = 3; grid[0][2] = 4; grid[0][3] = 2; grid[0][4] = 1; grid[0][5] = 4; grid[0][7] = 3;		
+		grid[0][0] = 3; grid[0][2] = 4; grid[0][3] = 2; grid[0][4] = 1;
+
+		// dark pieces
+		grid[7][0] = 3; grid[7][2] = 4; grid[7][3] = 2; grid[7][4] = 1;
 	}
 	
 	public void draw(Graphics g)
