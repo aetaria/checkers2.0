@@ -49,11 +49,11 @@ public class Player {
 		}
 		else if(piece == 'R')
 		{
-			rL.move(col, row, grid);
+			rL.moveStraight(col, row, grid);
 		}
 		else
 		{
-			bL.move(col, row, grid);
+			bL.moveDiagonal(col, row, grid);
 		}
 	}
 }
