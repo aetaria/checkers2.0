@@ -7,7 +7,7 @@ public class Queen
     private int x, y;
     private boolean team;
 
-    public Queen(int x, int y, boolean team) extends Player
+    public Queen(boolean team, int x, int y) extends Player
     {
         super(team);
         this.x = x;

@@ -6,7 +6,7 @@ public class Bishop extends Queen
     private boolean team;
     public Bishop(boolean team, int x, int y)
     {
-        super(x, y, team);
+        super(team, x, y);
         if(!team)
             pieceTeam = new ImageIcon("images/DarkBishop.png");
         else

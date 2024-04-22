@@ -4,9 +4,9 @@ public class King extends Queen
 {
     private ImageIcon pieceTeam;
     private boolean team;
-    public King(int x, int y, boolean team)
+    public King(boolean team, int x, int y)
     {
-        super(x, y, team);
+        super(team, x, y);
         if(!team)
             pieceTeam = new ImageIcon("images/DarkKing.png");
         else
