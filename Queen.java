@@ -1,13 +1,14 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class Queen
+public class Queen extends Player
 {
     private ImageIcon pieceTeam;
     private int x, y;
 
     public Queen(boolean team, int x, int y) //false = black ; true = white
     {
+        super(team);
         this.x = x;
         this.y = y;
         if (!team)
