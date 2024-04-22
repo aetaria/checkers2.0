@@ -1,4 +1,5 @@
-import java.awt.Graphics;
+import java.awt.*;
+import javax.swing.*;
 
 public class Player {
 	
@@ -56,13 +57,13 @@ public class Player {
 		{
 			boolean legal = R.moveStraight(col, row, grid);
 			if(!legal)
-				JOptionPane.showMessageDialog("Illegal move");
+				JOptionPane.showMessageDialog(null, "Illegal move");
 		}
 		else
 		{
 			boolean legal = B.moveDiagonal(col, row, grid);
 			if(!legal)
-				JOptionPane.showMessageDialog("Illegal move");
+				JOptionPane.showMessageDialog(null, "Illegal move");
 		}
 	}
 }

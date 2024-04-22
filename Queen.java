@@ -4,7 +4,7 @@ import java.awt.*;
 public class Queen extends Player
 {
     private ImageIcon pieceTeam;
-    private int x, y;
+    protected int x, y;
 
     public Queen(boolean team, int x, int y) //false = black ; true = white
     {
@@ -25,6 +25,12 @@ public class Queen extends Player
     {
         pieceTeam.paintIcon(null, g, makePoint(x), makePoint(y));
     }
+
+    public void draw(Graphics g, int[][] arr, ImageIcon pieceIcon)
+    {
+        pieceIcon.paintIcon(null, g, makePoint(x), makePoint(y));
+    }
+
 
     public boolean moveStraight(int newX, int newY, int[][] arr) {
         if (newX == x || newY == y) {
