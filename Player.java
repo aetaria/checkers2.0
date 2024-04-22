@@ -1,6 +1,6 @@
 import java.awt.Graphics;
 
-public class Game {
+public class Player {
 	private Queen qL = new Queen(true, 3, 7);
 	private Queen qD = new Queen(false, 3, 0);
 	private Bishop bL = new Bishop(true, 2, 7);
@@ -11,7 +11,7 @@ public class Game {
 	private King kD = new King(false, 4, 0);
 	
 	private int[][] grid = new int[8][8];
-	public Game()
+	public Player()
 	{
 //		0 = nothing ; 1 = king ; 2 = queen ; 3 = rook ; 4 = bishop
 //		light pieces
@@ -27,6 +27,10 @@ public class Game {
 		bL.draw(g, grid, 4);
 		rL.draw(g, grid, 3);
 		kL.draw(g, grid, 1);
+		qD.draw(g, grid, 2);
+		bD.draw(g, grid, 4);
+		rD.draw(g, grid, 3);
+		kD.draw(g, grid, 1);
 	}
 
 	public void parseMove(String move)
