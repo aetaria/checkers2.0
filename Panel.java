@@ -37,8 +37,8 @@ public class Panel extends JPanel
 				}
 			}
 		}
-
 		game.draw(g);
+		repaint();
 	}
 }
 
