@@ -5,7 +5,9 @@ import java.util.Random;
 public class Panel extends JPanel
 {
 	private int w, h;
-	private Player game = new Player();
+	private Player player1 = new Player(true);
+	private Player player2 = new Player(false);
+	int playerTracker = 0;
 
 	public Panel(int w, int h)
 	{
@@ -18,9 +20,18 @@ public class Panel extends JPanel
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		game.draw(g);
-		String move = JOptionPane.showInputDialog("Enter which piece you want to move and where:");
-		game.parseMove(move);
-		Random rng = new Random();
+		if(playerTracker == 0)
+		{
+			String move = JOptionPane.showInputDialog("White, enter which piece you want to move and where:");
+			player1.parseMove(move);
+			playerTracker++;
+		}
+		else if(playerTracker == 1)
+		{
+			String move = JOptionPane.showInputDialog("Black, enter which piece you want to move and where:");
+			player2.parseMove();
+			playerTracker--;
+		}
 		boolean black = true;
 		for(int i = 0; i<8; i++){
 			for(int j = 0; j<8; j++){
