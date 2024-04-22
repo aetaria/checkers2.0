@@ -17,6 +17,7 @@ public class Panel extends JPanel
 
 	public void paintComponent(Graphics g){
 		super.paintComponent(g);
+		game.draw(g);
 		String move = JOptionPane.showInputDialog("Enter which piece you want to move and where:");
 		game.parseMove(move);
 		Random rng = new Random();
@@ -37,7 +38,6 @@ public class Panel extends JPanel
 				}
 			}
 		}
-		game.draw(g);
 		repaint();
 	}
 }
