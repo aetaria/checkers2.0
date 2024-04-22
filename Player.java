@@ -39,7 +39,7 @@ public class Player {
 	{
 		char piece = move.charAt(0);
 		int col = ((int)move.charAt(1)) - 41;
-		int row = Integer.parseInt(move.substring(2, move.length()));
+		int row = Integer.parseInt(move.substring(2, move.length())) - 1;
 		if(piece == 'Q')
 		{
 			char direction = JOptionPane.showMessageDialog("Diagonal or Straight? (D/S):").charAt(0);
